@@ -1,6 +1,7 @@
 package clubSystem.model;
 
 import java.awt.Checkbox;
+import java.io.File;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -17,6 +18,7 @@ public class Board {
 	private ArrayList<String[]> clubs_initData;
 	private ArrayList<String[]> activities_initData;
 	private ArrayList<String[]> participators_initData;
+	private ArrayList<File> pictures;
 	static ArrayList<Participator> participators=new ArrayList<>();//成员列表
 	static ArrayList<Activity> activities=new ArrayList<>();//活动列表
 	static ArrayList<Club> clubs=new ArrayList<>();//社团列表
@@ -29,7 +31,17 @@ public class Board {
 		int participatorID=1;
 		int activityID=1;
 		int clubID=1;
+	
+		File fileFolder=new File("./src/pic");
+		pictures=new ArrayList<>();
+		//将图片路径存入数组
+		if(fileFolder.isDirectory()) {
+			for(File a:fileFolder.listFiles()) {
+				pictures.add(a);
+			}			
+		}
 		
+		//读csv文件
 		ReadCSV datas_init=new ReadCSV();
 		//得到用户表初始的表格数据存入成员列表
 		this.participators_initData=datas_init.getDataFromCSV("./src/csv/用户表.csv");
@@ -143,7 +155,12 @@ public class Board {
 		}
 		return null;
 	}
-	
+//图片轮播	
+	public void picturesPlay() {
+		for(File p:pictures) {
+			System.out.println(p);
+		}
+	}
 /*用户角度*/
 //显示所有社团
 	public String displayAllClubsName() {

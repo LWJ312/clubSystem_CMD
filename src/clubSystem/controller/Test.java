@@ -70,6 +70,8 @@ public class Test {
 	 public static void main(String[] Sargs) throws Exception {
 		    Board aBoard=new Board();
 		    Scanner reader=new Scanner(System.in);
+		    System.out.println("图片轮播: ");
+		    aBoard.picturesPlay();
 			System.out.println("终于等到你啦ヾ(◍°∇°◍)ﾉ\n(用户)输入u激活系统并进入主界面，(管理员)输入m进入管理界面，输入t退出系统——————请输入：");	
 			String input=reader.next();
 			while ((!input.equals("u"))&&(!input.equals("m"))&&(!input.equals("t"))) {
