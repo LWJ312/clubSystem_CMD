@@ -9,7 +9,7 @@ import clubSystem.model.*;
 import clubSystem.view.*;
 
 public class Test {
-	 static String USER_COMEIN_TIPS="Hi~ 这里是主界面!\n"
+	 static String USER_COMEIN_TIPS="Hi~ 这里是主界面哒!\n"
 				+"所有操作说明如下:\n"
 				+"查看社团详情 --输入“gC+社团编号”(eg:gC1,gC2...)\n"
 				+"查看活动详情 --输入“gA+活动编号”(eg:gA1,gA2...)\n"
