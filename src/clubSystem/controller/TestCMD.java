@@ -8,7 +8,7 @@ import javax.sound.midi.SysexMessage;
 import clubSystem.model.*;
 import clubSystem.view.*;
 
-public class Test {
+public class TestCMD {
 	 static String USER_COMEIN_TIPS="Hi~ 这里是主界面哒!\n"
 				+"所有操作说明如下:\n"
 				+"查看社团详情 --输入“gC+社团编号”(eg:gC1,gC2...)\n"
