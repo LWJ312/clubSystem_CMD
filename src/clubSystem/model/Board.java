@@ -281,7 +281,7 @@ public class Board {
 				}
 			}
 //			System.out.println(str);
-			return "输入的社团不存在呢,再看看其他的？";
+			return str;
 		}
 //对社团进行排序
 	    public String rankClubs(String rule) { 
